@@ -1,0 +1,45 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Test_countdown"
+        xmlns:hc="https://handyorg.github.io/handycontrol" x:Class="Test_countdown.setting"
+        mc:Ignorable="d"
+        WindowStyle="None"
+        AllowsTransparency="True"
+        MouseDown="Window_MouseDown"
+        Title="设置" Height="600" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="20*"/>
+        </Grid.RowDefinitions>
+        <Border BorderBrush="#FF3E3E3E" BorderThickness="1" Background="#FF3E3E3E">
+            <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="设置" VerticalAlignment="Center" Margin="10,0,0,0" Foreground="White" FontSize="16"/>
+        </Border>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,5,0" Height="20" Content="保存并退出" IsTabStop="False" Click="Button_Click"/>
+        <StackPanel Grid.Row="1" Orientation="Vertical" Margin="10,10,10,10">
+            <Grid Margin="0,2,0,2" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="标题:  " Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <TextBox Grid.Column="1" x:Name="titlesetting" Text="中考倒计时"/>
+            </Grid>
+            <Grid Margin="0,4,0,2" Height="25">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <TextBlock Text="计时日期:  " Grid.Column="0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                <DatePicker Grid.Column="1" x:Name="DateChoose" SelectedDate="2023/6/20"/>
+            </Grid>
+            <Grid Margin="0,20,0,0">
+                <TextBlock Text="鼓励鸡汤："/>
+                <TextBox Margin="0,27,0,0" TextWrapping="Wrap" AcceptsReturn="True" Height="444" x:Name="ChickenGULi" Text="荔枝"/>
+            </Grid>
+        </StackPanel>
+    </Grid>
+</Window>
